@@ -1,7 +1,7 @@
 # Autodesk View and Data API NPM Package
 
 ## Important
-**Do not upgrade to v 2.0.0 if you are not an Autodesk Employee**: the v2 API is only fully exposed for accounts using @autodesk.com. You will not be able to perform design registration if your account is not an Autodesk one.
+**Do not upgrade to v 2.0.0 if you are not an Autodesk Employee**: the v2 API is not yet fully exposed for accounts outside of @autodesk.com. You will not be able to perform design registration if your account is not an Autodesk one.
 
 You can safely use the latest v1 version in your project: reference 1.0.7 in your package.json
 
