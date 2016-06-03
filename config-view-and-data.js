@@ -44,6 +44,20 @@ module.exports = {
     listBuckets:      BASE_URL + '/oss/' + VERSION + '/buckets?%s',
     upload:           BASE_URL + '/oss/' + VERSION + '/buckets/%s/objects/%s',
     resumableUpload:  BASE_URL + '/oss/' + VERSION + '/buckets/%s/objects/%s/resumable',
+
+    // the new endpoints after Forge Dev Con in June 2016
+    getFormats:       BASE_URL + '/modelderivative/' + VERSION + '/designdata/formats',
+    getThumbnail:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/thumbnail', // %s: urn
+    getProperties:    BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s/properties', // first %s is urn, second is guid
+    getMetaData:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata', // %s: urn
+    getManifest:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // design urn
+    getHierarchy:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s', // first %s is urn, second is guid
+    downloadDerivative:
+                      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest/%s', // first %s is urn, second is derivative urn
+    deleteManifest:   BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // %s: urn
+    postJob:          BASE_URL + '/modelderivative/' + VERSION + '/designdata/job', // %s: urn
+
+    // the following will be deprecated after Forge Dev Con in June 2016
     supported:        BASE_URL + '/derivativeservice/' + VERSION + '/supported',
     register:         BASE_URL + '/derivativeservice/' + VERSION + '/registration',
     unregister:       BASE_URL + '/derivativeservice/' + VERSION + '/registration/%s',
