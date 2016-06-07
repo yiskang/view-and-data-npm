@@ -45,24 +45,27 @@ module.exports = {
     upload:           BASE_URL + '/oss/' + VERSION + '/buckets/%s/objects/%s',
     resumableUpload:  BASE_URL + '/oss/' + VERSION + '/buckets/%s/objects/%s/resumable',
 
-    // the new endpoints after Forge Dev Con in June 2016
-    mdFormats:       BASE_URL + '/modelderivative/' + VERSION + '/designdata/formats',
-    mdThumbnail:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/thumbnail', // %s: urn
-    mdProperties:    BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s/properties', // first %s is urn, second is guid
-    mdMetaData:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata', // %s: urn
-    mdManifest:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // design urn
-    mdHierarchy:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s', // first %s is urn, second is guid
-    mdDerivative:    BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest/%s', // first %s is urn, second is derivative urn
-    mdManifest:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // %s: urn
-    mdpostJob:       BASE_URL + '/modelderivative/' + VERSION + '/designdata/job', // %s: urn
-
-    // the following will be deprecated after Forge Dev Con in June 2016
+    // the derivativeservice APIs will be deprecated after Forge Dev Con in June 2016
     supported:        BASE_URL + '/derivativeservice/' + VERSION + '/supported',
     register:         BASE_URL + '/derivativeservice/' + VERSION + '/registration',
     unregister:       BASE_URL + '/derivativeservice/' + VERSION + '/registration/%s',
     thumbnail:        BASE_URL + '/derivativeservice/' + VERSION + '/thumbnails/%s',
     manifest:         BASE_URL + '/derivativeservice/' + VERSION + '/manifest/%s',
     derivatives:      BASE_URL + '/derivativeservice/' + VERSION + '/derivatives/%s',
-    viewers:          BASE_URL + '/viewingservice/'    + VERSION + '/viewers'
+    viewers:          BASE_URL + '/viewingservice/'    + VERSION + '/viewers',
+
+    modelDerivative: {
+      // the new endpoints after Forge Dev Con in June 2016
+      Formats:       BASE_URL + '/modelderivative/' + VERSION + '/designdata/formats',
+      Thumbnail:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/thumbnail', // %s: urn
+      Properties:    BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s/properties', // first %s is urn, second is guid
+      MetaData:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata', // %s: urn
+      Manifest:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // design urn
+      Hierarchy:     BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s', // first %s is urn, second is guid
+      Derivative:    BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest/%s', // first %s is urn, second is derivative urn
+      Manifest:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest', // %s: urn
+      postJob:       BASE_URL + '/modelderivative/' + VERSION + '/designdata/job', // %s: urn
+    }
+
   }
 }
